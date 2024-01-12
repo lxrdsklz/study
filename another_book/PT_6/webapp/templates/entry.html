@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='post'action='/search_for'>
+    <table>
+        <p>Используйте эту форму, чтобы отправить поисковый запрос:</p>
+        <tr>
+            <td>
+                Фраза:
+            </td>
+            <td>
+                <input name="phrase" type="text" width="60">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Буквы:
+            </td>
+            <td>
+                <input name="letters" type="text" value="aeiou">
+            </td>
+        </tr>
+    </table>
+    <p>Нажмите кнопку, если поля заполнены:</p>
+    <p><input value="Готово!" type="submit"></p>
+</form>
+
+{% endblock %}
